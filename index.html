@@ -143,7 +143,6 @@ nav,section,footer,.li-cta{position:relative;z-index:1}
 .comm-photo img{width:100%;height:100%;object-fit:cover;display:block;min-height:250px;transition:transform .5s}
 .comm-item:hover .comm-photo img{transform:scale(1.04)}
 
-/* Full-width video block for documentary */
 .doc-video-block{margin-top:2.5rem;border:1px solid rgba(201,168,76,.25);background:rgba(26,37,53,.8);padding:1.5rem}
 .doc-video-block .vid-label-top{font-family:'Cinzel',serif;font-size:.55rem;letter-spacing:.35em;color:var(--gold);text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:.75rem}
 .doc-video-block .vid-label-top::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(201,168,76,.3),transparent)}
@@ -219,18 +218,40 @@ footer{background:rgba(17,28,39,.95);padding:1.75rem 6rem;display:flex;align-ite
 .photo-fill{width:100%;overflow:hidden;border:1px solid rgba(201,168,76,.15)}
 .photo-fill img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.7)}
 
+/* ── MOBILE ── */
 @media(max-width:900px){
-  .hero{grid-template-columns:1fr}.hero::after{display:none}.hero-right{display:none}
-  .sec{padding:3.5rem 1.5rem}.two-col,.three-col{grid-template-columns:1fr}
+  /* Hero: stack vertically, show both columns */
+  .hero{grid-template-columns:1fr;grid-template-rows:auto auto;min-height:auto}
+  .hero::after{display:none}
+  .hero-left{padding:3.5rem 1.5rem 1.5rem}
+  .hero-right{
+    display:flex;
+    padding:1.5rem 1.5rem 3rem;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    gap:1.25rem;
+    opacity:1;
+    animation:none;
+  }
+  .hero-photo{width:180px;height:240px}
+  .stats{max-width:100%;width:100%}
+
+  .sec{padding:3.5rem 1.5rem}
+  .two-col,.three-col{grid-template-columns:1fr}
   .nr-grid{grid-template-columns:1fr 1fr}
   .int-grid{grid-template-columns:1fr 1fr}
-  .int-tile:nth-child(1){grid-row:auto}.int-tile:nth-child(5){grid-column:auto}
-  .comm-item{grid-template-columns:1fr}.hero-left{padding:3.5rem 1.5rem}
+  .int-tile:nth-child(1){grid-row:auto}
+  .int-tile:nth-child(5){grid-column:auto}
+  .comm-item{grid-template-columns:1fr}
   .contact-sec,.li-cta{padding:3.5rem 1.5rem}
-  footer{padding:1.5rem 1.5rem}.sidenav{display:none}
+  footer{padding:1.5rem 1.5rem}
+  .sidenav{display:none}
   .li-banner{flex-direction:column;text-align:center}
   .podium-grid{grid-template-columns:1fr 1fr}
   .medal-display{gap:1rem}
+  .ach-row{grid-template-columns:70px 1fr;gap:.5rem}
+  .ach-b{display:none}
 }
 </style>
 </head>
@@ -376,17 +397,16 @@ footer{background:rgba(17,28,39,.95);padding:1.75rem 6rem;display:flex;align-ite
         </div>
         <div>
           <div class="photo photo-wide"><img src="https://i.ibb.co/4w4Z24kW/Screenshot-2026-05-22-19-36-32-82-e2d5b3f32b79de1d45acd1fad96fbb0f.jpg" alt="Nepali Nationals 2025"></div>
-          <p class="cap">Nepali Nationals 2025  -  participants from 5 nations</p>
+          <p class="cap">Nepali Nationals 2025 - participants from 5 nations</p>
         </div>
       </div>
     </div>
     <div class="card reveal" data-n="2">
       <p class="card-lbl">Self-initiated · Age 10 to Present</p>
-      <h3 class="card-title">YouTube Channel  -  242,560 Views · Visual Storytelling</h3>
+      <h3 class="card-title">YouTube Channel - 242,560 Views · Visual Storytelling</h3>
       <div class="two-col" style="gap:2rem">
         <div>
-          <p class="body-text">Independently ran a personal YouTube channel with 242,560+ views, solely responsible for filming, editing, graphic design, and storytelling. Started at age 10 to learn video editing. Co-worked with SpeedCubeShop (international multi-millionaire retailer) from 2022 to 2025. ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 
-            ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  The sole purpose of making this channel for me was not fame, views or subscribers. The reason I started this when I was 10 was to learn the art of visual storytelling. In the future I want to use these skills to create impactful content (movies, documentaries etc.) that showcase Nepal to the world.</p>
+          <p class="body-text">Independently ran a personal YouTube channel with 242,560+ views, solely responsible for filming, editing, graphic design, and storytelling. Started at age 10 to learn video editing. Co-worked with SpeedCubeShop (international multi-millionaire retailer) from 2022 to 2025.<br><br>The sole purpose of making this channel for me was not fame, views or subscribers. The reason I started this when I was 10 was to learn the art of visual storytelling. In the future I want to use these skills to create impactful content (movies, documentaries etc.) that showcase Nepal to the world.</p>
           <div class="link-row" style="margin-top:.75rem">Sample edit: <a href="https://youtu.be/o6-GXBhU6w4" target="_blank">youtu.be/o6-GXBhU6w4</a></div>
           <div class="badge-row"><span class="badge">242K Views</span><span class="badge">1,164 Subscribers</span><span class="badge">Started Age 10</span></div>
         </div>
@@ -394,19 +414,19 @@ footer{background:rgba(17,28,39,.95);padding:1.75rem 6rem;display:flex;align-ite
           <div class="vid-embed">
             <iframe src="https://www.youtube.com/embed/o6-GXBhU6w4" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
           </div>
-          <p class="cap">Sample of how I edit  -  YouTube</p>
+          <p class="cap">Sample of how I edit - YouTube</p>
         </div>
       </div>
       <div style="margin-top:1.5rem">
         <div class="photo photo-wide" style="max-width:700px">
           <img src="https://i.ibb.co/QvmGZSBn/You-Tube.png" alt="YouTube Studio Analytics 242,560 views">
         </div>
-        <p class="cap">YouTube Studio  -  242,560 lifetime views · 1,164 subscribers</p>
+        <p class="cap">YouTube Studio - 242,560 lifetime views · 1,164 subscribers</p>
       </div>
     </div>
     <div class="card reveal" data-n="3">
       <p class="card-lbl">Design · Documentation · School Initiative</p>
-      <h3 class="card-title">School Yearbook Designer  -  Daffodil Boarding School</h3>
+      <h3 class="card-title">School Yearbook Designer - Daffodil Boarding School</h3>
       <div class="two-col" style="gap:2rem">
         <div>
           <p class="body-text">Designed and produced the official school yearbook for Daffodil Boarding School for the Nepali academic year 2081. This involved layout design, typesetting, content writing, and print preparation, an end-to-end production project completed while managing all other commitments.</p>
@@ -428,21 +448,21 @@ footer{background:rgba(17,28,39,.95);padding:1.75rem 6rem;display:flex;align-ite
       <div class="reveal-left">
         <p class="prose" style="margin-bottom:2rem">A consistent winner across competitive speaking formats. I am unusually comfortable with discomfort, performing in front of large crowds. This has built in me a kind of <strong>stage confidence that most people my age have not had the chance to develop.</strong></p>
         <div class="ach-table">
-          <div class="ach-row"><span class="ach-yr">2025</span><span class="ach-t">Bal Club  -  Pitched community initiative to Budhanilakantha Municipality officials</span><span class="ach-b">Selected</span></div>
-          <div class="ach-row"><span class="ach-yr">2025</span><span class="ach-t">Climate Change Start-up Pitch  -  Presented to panel of judges</span><span class="ach-b">Finalist</span></div>
-          <div class="ach-row"><span class="ach-yr">2025</span><span class="ach-t">Nepali Nationals 2025 Opening Address  -  Spoke before 5-nation crowd</span><span class="ach-b">Host</span></div>
-          <div class="ach-row"><span class="ach-yr">2025</span><span class="ach-t">IEEE Cubing Nepal  -  Event briefing and MC duties</span><span class="ach-b">MC</span></div>
+          <div class="ach-row"><span class="ach-yr">2025</span><span class="ach-t">Bal Club - Pitched community initiative to Budhanilakantha Municipality officials</span><span class="ach-b">Selected</span></div>
+          <div class="ach-row"><span class="ach-yr">2025</span><span class="ach-t">Climate Change Start-up Pitch - Presented to panel of judges</span><span class="ach-b">Finalist</span></div>
+          <div class="ach-row"><span class="ach-yr">2025</span><span class="ach-t">Nepali Nationals 2025 Opening Address - Spoke before 5-nation crowd</span><span class="ach-b">Host</span></div>
+          <div class="ach-row"><span class="ach-yr">2025</span><span class="ach-t">IEEE Cubing Nepal - Event briefing and MC duties</span><span class="ach-b">MC</span></div>
           <div class="ach-row"><span class="ach-yr">2025 · 2023</span><span class="ach-t">School Debate Competition</span><span class="ach-b">🏆 Winner</span></div>
           <div class="ach-row"><span class="ach-yr">2025 · 2024</span><span class="ach-t">PowerPoint Presentation Competition</span><span class="ach-b">🏆 Winner</span></div>
           <div class="ach-row"><span class="ach-yr">2024</span><span class="ach-t">Oratory Competition</span><span class="ach-b">🏆 Winner</span></div>
-          <div class="ach-row"><span class="ach-yr">2024</span><span class="ach-t">KUbing 2024  -  Competitor orientation and speech</span><span class="ach-b">Speaker</span></div>
-          <div class="ach-row"><span class="ach-yr">2024</span><span class="ach-t">Tourist Documentary  -  On-camera interviews with international tourists</span><span class="ach-b">Host</span></div>
-          <div class="ach-row"><span class="ach-yr">2023</span><span class="ach-t">Leo Club Awareness Drive  -  Presented initiative to student body</span><span class="ach-b">Speaker</span></div>
+          <div class="ach-row"><span class="ach-yr">2024</span><span class="ach-t">KUbing 2024 - Competitor orientation and speech</span><span class="ach-b">Speaker</span></div>
+          <div class="ach-row"><span class="ach-yr">2024</span><span class="ach-t">Tourist Documentary - On-camera interviews with international tourists</span><span class="ach-b">Host</span></div>
+          <div class="ach-row"><span class="ach-yr">2023</span><span class="ach-t">Leo Club Awareness Drive - Presented initiative to student body</span><span class="ach-b">Speaker</span></div>
           <div class="ach-row"><span class="ach-yr">2022</span><span class="ach-t">Poem Recitation Competition</span><span class="ach-b">🥉 Runner-Up</span></div>
-          <div class="ach-row"><span class="ach-yr">2021</span><span class="ach-t">Singing Competition  -  Solo performance before large audience</span><span class="ach-b">🥉 Runner-Up</span></div>
+          <div class="ach-row"><span class="ach-yr">2021</span><span class="ach-t">Singing Competition - Solo performance before large audience</span><span class="ach-b">🥉 Runner-Up</span></div>
           <div class="ach-row"><span class="ach-yr">2019 · 2017</span><span class="ach-t">Essay Writing Competition</span><span class="ach-b">🏆 Winner</span></div>
-          <div class="ach-row"><span class="ach-yr">2019</span><span class="ach-t">Kamana Little Champs  -  Performed before 3,500+ audience</span><span class="ach-b">Top 10</span></div>
-          <div class="ach-row"><span class="ach-yr">2019</span><span class="ach-t">Talent Show Competition  -  Solo stage performance</span><span class="ach-b">🏆 Winner</span></div>
+          <div class="ach-row"><span class="ach-yr">2019</span><span class="ach-t">Kamana Little Champs - Performed before 3,500+ audience</span><span class="ach-b">Top 10</span></div>
+          <div class="ach-row"><span class="ach-yr">2019</span><span class="ach-t">Talent Show Competition - Solo stage performance</span><span class="ach-b">🏆 Winner</span></div>
         </div>
       </div>
       <div class="reveal-right">
@@ -468,7 +488,7 @@ footer{background:rgba(17,28,39,.95);padding:1.75rem 6rem;display:flex;align-ite
       <div class="reveal-left">
         <blockquote class="blockq">Before cubing, I was madly into dancing.</blockquote>
         <div class="prose">
-          <p><strong>Finalist (Top 10) at Kamana Little Champs (2019)</strong>  -  city-wide dance competition in Kathmandu with 3,500+ participants.</p>
+          <p><strong>Finalist (Top 10) at Kamana Little Champs (2019)</strong> - city-wide dance competition in Kathmandu with 3,500+ participants.</p>
           <p><strong>Winner of Talent Show Competition (2019)</strong> · <strong>2nd Runner-Up in Singing Competition (2021).</strong></p>
           <p>Performing on stage from a young age gave me a confidence and presence that I carry into everything I do today.</p>
         </div>
@@ -480,7 +500,7 @@ footer{background:rgba(17,28,39,.95);padding:1.75rem 6rem;display:flex;align-ite
         <div class="photo photo-wide">
           <img src="https://i.ibb.co/1fXNJh8s/Screenshot-2026-05-22-19-52-26-48-f9ee0578fe1cc94de7482bd41accb329.jpg" alt="Kamana Little Dance Champion 2019">
         </div>
-        <p class="cap">Kamana Little Dance Champion 2019  -  Semi-Final</p>
+        <p class="cap">Kamana Little Dance Champion 2019 - Semi-Final</p>
         <div class="photo photo-43" style="margin-top:4px">
           <img src="https://i.ibb.co/jYgggcD/Screenshot-2026-05-23-16-40-16-47-254de13a4bc8758c9908fff1f73e3725.jpg" alt="Performance">
         </div>
@@ -504,7 +524,7 @@ footer{background:rgba(17,28,39,.95);padding:1.75rem 6rem;display:flex;align-ite
         <ul style="font-size:.88rem;color:rgba(236,240,241,.6);line-height:2.1;list-style:none;padding:0;margin-top:1rem">
           <li>→ Spent time with children with Down Syndrome, danced, sang and made their day memorable</li>
           <li>→ Cooked dinner for an orphanage. The smiles received is something I truly cherish</li>
-          <li>→ <strong style="color:var(--gold2)">Bal Club Activist</strong>  -  Budhanilakantha Municipality (2024 to 2025)</li>
+          <li>→ <strong style="color:var(--gold2)">Bal Club Activist</strong> - Budhanilakantha Municipality (2024 to 2025)</li>
         </ul>
       </div>
       <div class="comm-photo"><img src="https://i.ibb.co/mVjLT93v/Screenshot-2026-05-22-19-43-39-71-a23b203fd3aafc6dcb84e438dda678b6.jpg" alt="Clothing donation"></div>
@@ -513,12 +533,10 @@ footer{background:rgba(17,28,39,.95);padding:1.75rem 6rem;display:flex;align-ite
       <div class="comm-photo"><img src="https://i.ibb.co/JF8brr6p/Screenshot-2026-05-22-19-39-01-61-92460851df6f172a4592fca41cc2d2e6.jpg" alt="Down Syndrome children"></div>
       <div class="comm-content">
         <p class="card-lbl">Documentary Work · 2024/25</p>
-        <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--white);margin-bottom:.75rem">Interviewing Tourists  -  Telling Nepal's Real Story</h3>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--white);margin-bottom:.75rem">Interviewing Tourists - Telling Nepal's Real Story</h3>
         <p class="body-text" style="margin-bottom:1.25rem">In 2024/25 I was creating a documentary about plastic waste and climate change, and I decided to interview tourists to get their view on Nepal. They always expressed how <strong style="color:var(--white)">Nepal is way more than what they initially thought.</strong> Most foreigners are unaware about Nepal's amazing traditions. In the future I want to use video editing and storytelling to <strong style="color:var(--white)">tell Nepal's real story to the world.</strong></p>
       </div>
     </div>
-
-    <!-- Full-width documentary video below both comm-items -->
     <div class="doc-video-block reveal">
       <div class="vid-label-top">A small section from my plastic pollution documentary</div>
       <iframe src="https://drive.google.com/file/d/1EDQ6dYJuAk-JBe0wRk-5pomV5WBDS953/preview" allow="autoplay" allowfullscreen></iframe>
@@ -536,7 +554,7 @@ footer{background:rgba(17,28,39,.95);padding:1.75rem 6rem;display:flex;align-ite
     <div class="two-col">
       <div class="reveal-left">
         <div class="hbox">
-          <h3>1st Dollar at Age 12  -  6 Years of Freelance</h3>
+          <h3>1st Dollar at Age 12 - 6 Years of Freelance</h3>
           <p>I managed to earn my 1st dollar at the young age of 12 (Grade 7) through my expertise in video-editing. Since my father passed away when I was just 11 months old and I was raised by a single parent, even if the amount was not a lot, it provided a small help to my financially struggling family.</p>
         </div>
         <div class="hbox">
@@ -560,7 +578,7 @@ footer{background:rgba(17,28,39,.95);padding:1.75rem 6rem;display:flex;align-ite
         <div class="photo" style="margin-bottom:4px">
           <img src="https://i.ibb.co/QvmGZSBn/You-Tube.png" alt="YouTube Studio Analytics" style="width:100%;height:auto;object-fit:contain">
         </div>
-        <p class="cap">YouTube Studio  -  242,560 views · 1,164 subscribers</p>
+        <p class="cap">YouTube Studio - 242,560 views · 1,164 subscribers</p>
       </div>
     </div>
   </div>
