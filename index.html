@@ -93,7 +93,7 @@ nav,section,footer,.li-cta{position:relative;z-index:1}
 .link-row{font-size:.72rem;color:rgba(201,168,76,.55);margin:.35rem 0;word-break:break-all}
 .link-row a{color:var(--gold2);text-decoration:none}.link-row a:hover{text-decoration:underline}
 
-.nr-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;background:rgba(201,168,76,.08);margin-bottom:3rem}
+.nr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(201,168,76,.08);margin-bottom:3rem}
 .nr-card{background:rgba(26,37,53,.9);padding:1.5rem 1rem;text-align:center;border-top:3px solid var(--gold);transition:all .3s}
 .nr-card:hover{background:rgba(44,59,80,.95);transform:translateY(-4px)}
 .nr-icon{font-size:1.5rem;margin-bottom:.5rem}
@@ -218,27 +218,24 @@ footer{background:rgba(17,28,39,.95);padding:1.75rem 6rem;display:flex;align-ite
 .photo-fill{width:100%;overflow:hidden;border:1px solid rgba(201,168,76,.15)}
 .photo-fill img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.7)}
 
+/* Vision section */
+.vision-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(201,168,76,.08);margin-top:2.5rem}
+.vstep{background:rgba(30,42,58,.92);padding:1.75rem;border-top:2px solid var(--gold);transition:all .3s}
+.vstep:hover{background:rgba(37,51,71,.95);transform:translateY(-3px)}
+.vstep .vs-l{font-family:'Cinzel',serif;font-size:.5rem;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:.5rem;display:block}
+.vstep h3{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--white);margin-bottom:.5rem}
+.vstep p{font-size:.82rem;color:rgba(236,240,241,.55);line-height:1.7}
+
 /* ── MOBILE ── */
 @media(max-width:900px){
-  /* Hero: stack vertically, show both columns */
   .hero{grid-template-columns:1fr;grid-template-rows:auto auto;min-height:auto}
   .hero::after{display:none}
   .hero-left{padding:3.5rem 1.5rem 1.5rem}
-  .hero-right{
-    display:flex;
-    padding:1.5rem 1.5rem 3rem;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    gap:1.25rem;
-    opacity:1;
-    animation:none;
-  }
+  .hero-right{display:flex;padding:1.5rem 1.5rem 3rem;justify-content:center;align-items:center;flex-direction:column;gap:1.25rem;opacity:1;animation:none}
   .hero-photo{width:180px;height:240px}
   .stats{max-width:100%;width:100%}
-
   .sec{padding:3.5rem 1.5rem}
-  .two-col,.three-col{grid-template-columns:1fr}
+  .two-col,.three-col,.vision-steps{grid-template-columns:1fr}
   .nr-grid{grid-template-columns:1fr 1fr}
   .int-grid{grid-template-columns:1fr 1fr}
   .int-tile:nth-child(1){grid-row:auto}
@@ -258,23 +255,13 @@ footer{background:rgba(17,28,39,.95);padding:1.75rem 6rem;display:flex;align-ite
 <body>
 
 <div class="bg-slideshow" id="bgSlideshow">
-  <img src="https://i.ibb.co/jYgggcD/Screenshot-2026-05-23-16-40-16-47-254de13a4bc8758c9908fff1f73e3725.jpg" class="active">
-  <img src="https://i.ibb.co/Y431D3LM/Screenshot-2026-05-23-16-39-46-84-254de13a4bc8758c9908fff1f73e3725.jpg">
-  <img src="https://i.ibb.co/ZpB9QG99/Screenshot-2026-05-23-16-41-56-05-254de13a4bc8758c9908fff1f73e3725.jpg">
-  <img src="https://i.ibb.co/Q7wWwCdG/Screenshot-2026-05-23-16-41-45-55-254de13a4bc8758c9908fff1f73e3725.jpg">
-  <img src="https://i.ibb.co/Hwjdx6q/Screenshot-2026-05-23-16-41-36-95-254de13a4bc8758c9908fff1f73e3725.jpg">
-  <img src="https://i.ibb.co/v6Y8tt1Y/Screenshot-2026-05-23-16-41-28-39-254de13a4bc8758c9908fff1f73e3725.jpg">
-  <img src="https://i.ibb.co/mVyJc5FX/Screenshot-2026-05-23-16-41-19-35-254de13a4bc8758c9908fff1f73e3725.jpg">
-  <img src="https://i.ibb.co/vxQdLGL7/Screenshot-2026-05-23-16-41-08-20-254de13a4bc8758c9908fff1f73e3725.jpg">
-  <img src="https://i.ibb.co/S7RQ5L7z/Screenshot-2026-05-23-16-40-59-50-254de13a4bc8758c9908fff1f73e3725.jpg">
-  <img src="https://i.ibb.co/whNGQgXv/Screenshot-2026-05-23-16-40-48-03-254de13a4bc8758c9908fff1f73e3725.jpg">
-  <img src="https://i.ibb.co/mrnMqTW2/Screenshot-2026-05-23-16-40-38-99-254de13a4bc8758c9908fff1f73e3725.jpg">
-  <img src="https://i.ibb.co/hJJdGFzF/Screenshot-2026-05-23-16-40-23-87-254de13a4bc8758c9908fff1f73e3725.jpg">
-  <img src="https://i.ibb.co/xK2B1jfK/Screenshot-2026-05-23-16-40-07-60-254de13a4bc8758c9908fff1f73e3725.jpg">
-  <img src="https://i.ibb.co/NgPt7gt8/Screenshot-2026-05-23-16-39-55-16-254de13a4bc8758c9908fff1f73e3725.jpg">
-  <img src="https://i.ibb.co/nGHC1vs/Screenshot-2026-05-23-16-39-35-58-254de13a4bc8758c9908fff1f73e3725.jpg">
-  <img src="https://i.ibb.co/s8R1fq6/Screenshot-2026-05-23-16-39-18-78-254de13a4bc8758c9908fff1f73e3725.jpg">
-  <img src="https://i.ibb.co/nsQNQ15n/Screenshot-2026-05-23-16-38-46-26-254de13a4bc8758c9908fff1f73e3725.jpg">
+  <img src="https://i.ibb.co/Q3zXGChV/2.jpg" class="active">
+  <img src="https://i.ibb.co/VGd18dm/3.jpg">
+  <img src="https://i.ibb.co/GfS5BfXL/5.jpg">
+  <img src="https://i.ibb.co/4g9cnvfk/9.jpg">
+  <img src="https://i.ibb.co/FqX8DdPy/10.jpg">
+  <img src="https://i.ibb.co/DgGH155x/13.jpg">
+  <img src="https://i.ibb.co/tMpsvCbp/Screenshot-2026-11-09-130315.png">
 </div>
 
 <nav class="sidenav" id="snav">
@@ -299,10 +286,10 @@ footer{background:rgba(17,28,39,.95);padding:1.75rem 6rem;display:flex;align-ite
   </div>
   <div class="hero-right">
     <div class="hero-photo">
-      <img src="https://i.ibb.co/yB6bsFtV/Screenshot-2026-05-22-18-52-50-62-a23b203fd3aafc6dcb84e438dda678b6.jpg" alt="Anubhav Gyawali">
+      <img src="https://i.ibb.co/NgC9Y4PH/1.jpg" alt="Anubhav Gyawali">
     </div>
     <div class="stats">
-      <div class="stat"><span class="stat-n">5×</span><span class="stat-l">National Records</span></div>
+      <div class="stat"><span class="stat-n">6×</span><span class="stat-l">National Records</span></div>
       <div class="stat"><span class="stat-n">242K</span><span class="stat-l">YouTube Views</span></div>
       <div class="stat"><span class="stat-n">8</span><span class="stat-l">WCA Medals</span></div>
     </div>
@@ -316,23 +303,22 @@ footer{background:rgba(17,28,39,.95);padding:1.75rem 6rem;display:flex;align-ite
       <div><p class="sec-lbl">Introduction</p><h2 class="sec-title">Who <em>Am I?</em></h2><div class="rule"></div></div>
     </div>
     <div class="li-banner" style="margin-bottom:2.5rem">
-      <p>I'd love to connect with you personally. <strong>Check out my LinkedIn</strong> and findout more about who I am.</p>
+      <p>I'd love to connect with you personally. <strong>Check out my LinkedIn</strong> and find out more about who I am.</p>
       <a href="https://www.linkedin.com/in/anubhavgyawali/" target="_blank" class="li-btn">View My LinkedIn →</a>
     </div>
     <div class="two-col">
       <div class="reveal-left">
         <div class="portrait-wrap">
-          <img src="https://i.ibb.co/V0ySm4ch/images-3.jpg" alt="Anubhav Gyawali portrait">
+          <img src="https://i.ibb.co/Q3zXGChV/2.jpg" alt="Anubhav Gyawali portrait">
         </div>
       </div>
       <div class="prose reveal-right">
         <p>My name is <strong>Anubhav Gyawali</strong>. I am a 16-year-old content creator, speedcuber, and storyteller from <strong>Kathmandu, Nepal</strong>.</p>
-        <p>I am most prominently known as the <strong>Fastest Cuber in Nepal</strong>. I have held 5 national records which has allowed me to represent Nepal on the international stage. Don't take my word for it. <a href="https://www.google.com/search?q=who+is+the+fastest+cuber+in+Nepal" target="_blank" style="color:var(--gold2);text-decoration:underline;font-style:normal">Click here Search it yourself →</a></p>
+        <p>I am most prominently known as the <strong>Fastest Cuber in Nepal</strong>. I have held 6 national records which has allowed me to represent Nepal on the international stage. Don't take my word for it. <a href="https://www.google.com/search?q=who+is+the+fastest+cuber+in+Nepal" target="_blank" style="color:var(--gold2);text-decoration:underline;font-style:normal">Click here Search it yourself →</a></p>
         <p>My greatest strength is the ability to <strong>learn fast, adapt, and apply what I have learned under pressure</strong>. Cubing taught me this most clearly: instead of just practicing more I studied algorithms methodically, identified patterns in my inefficiencies, and restructured my approach until the results changed. That same mental process: break the problem down, find the inefficiency, rebuild. That is how I approach almost everything in my life.</p>
-        <p><strong>Organizing Nepali Nationals 2025  </strong> tested me in ways I never anticipated. Coordinating competitors from five countries, planning a three-day schedule, managing last-minute changes, staying composed when things went wrong. The fact that the event ran successfully is something I carry a lot of quiet pride about.</p>
-        <p>And under all of it is something more personal: <strong>I grew up without a father, in a household where every resource had real weight</strong>. That reality has made me both grateful and deeply motivated to make the most of every opportunity placed in front of me.</p>
+        <p><strong>Organizing Nepali Nationals 2025  </strong> tested me in ways I never anticipated. Coordinating competitors from five countries, planning a three-day schedule, managing last-minute changes, staying composed when things went wrong.</p>
         <div class="badge-row">
-          <span class="badge">Entrepreneur</span><span class="badge">5x National Record</span>
+          <span class="badge">Entrepreneur</span><span class="badge">6x National Record</span>
           <span class="badge">Content Creator</span><span class="badge">Event Director</span>
           <span class="badge">Storyteller</span><span class="badge">Yearbook Designer</span>
         </div>
@@ -347,19 +333,21 @@ footer{background:rgba(17,28,39,.95);padding:1.75rem 6rem;display:flex;align-ite
       <div class="sec-num">02</div>
       <div><p class="sec-lbl">World Cube Association · 2023GYAW01</p><h2 class="sec-title">International Competition <em>Results</em></h2><div class="rule"></div></div>
     </div>
-    <div class="wca-label reveal">5 National Records</div>
+    <div class="wca-label reveal">6 National Records</div>
     <div class="nr-grid reveal">
       <div class="nr-card"><div class="nr-icon">🏆</div><p class="nr-event">3x3 Cube</p><p class="nr-time">6.66s</p><p class="nr-type">Single NR</p></div>
       <div class="nr-card"><div class="nr-icon">🏆</div><p class="nr-event">3x3 Cube</p><p class="nr-time">7.90s</p><p class="nr-type">Average NR</p></div>
-      <div class="nr-card"><div class="nr-icon">🏆</div><p class="nr-event">3x3 One-Handed</p><p class="nr-time">10.65s</p><p class="nr-type">Single NR</p></div>
+      <div class="nr-card"><div class="nr-icon">🏆</div><p class="nr-event">3x3 One-Handed</p><p class="nr-time">9.03s</p><p class="nr-type">Single NR</p></div>
       <div class="nr-card"><div class="nr-icon">🏆</div><p class="nr-event">3x3 One-Handed</p><p class="nr-time">13.57s</p><p class="nr-type">Average NR</p></div>
-      <div class="nr-card"><div class="nr-icon">🏆</div><p class="nr-event">One Handed (former)</p><p class="nr-time">12.16s</p><p class="nr-type">Single NR</p></div>
+      <div class="nr-card"><div class="nr-icon">🏆</div><p class="nr-event">One-Handed (former)</p><p class="nr-time">10.65s</p><p class="nr-type">Single NR</p></div>
+      <div class="nr-card"><div class="nr-icon">🏆</div><p class="nr-event">One-Handed (former)</p><p class="nr-time">12.16s</p><p class="nr-type">Single NR</p></div>
     </div>
     <div class="medal-display reveal">
       <div class="medal-box gold-medal"><span class="mn">1</span><span class="ml">Gold</span></div>
       <div class="medal-box silver-medal"><span class="mn">5</span><span class="ml">Silver</span></div>
       <div class="medal-box bronze-medal"><span class="mn">2</span><span class="ml">Bronze</span></div>
-      <div class="medal-box" style="border-color:rgba(201,168,76,.3)"><span class="mn" style="color:var(--gold2);font-size:2rem">342</span><span class="ml">Completed Solves</span></div>
+      <div class="medal-box" style="border-color:rgba(201,168,76,.3)"><span class="mn" style="color:var(--gold2);font-size:2rem">405</span><span class="ml">Completed Solves</span></div>
+      <div class="medal-box" style="border-color:rgba(201,168,76,.3)"><span class="mn" style="color:var(--gold2);font-size:2rem">6</span><span class="ml">Competitions</span></div>
     </div>
     <div class="wca-label reveal">All Podium Finishes</div>
     <div class="podium-grid reveal">
@@ -374,8 +362,8 @@ footer{background:rgba(17,28,39,.95);padding:1.75rem 6rem;display:flex;align-ite
       <div class="podium-card bronze"><span class="podium-medal">🥉</span><p class="podium-event">3x3 One-Handed</p><p class="podium-comp">IEEE Cubing Nepal 2025</p><p class="podium-time">15.33s avg</p><p class="podium-sub">3rd Place · Final · NR Single</p></div>
     </div>
     <div class="photo-grid pg-2 reveal" style="gap:4px">
-      <div class="photo photo-wide"><img src="https://i.ibb.co/4w4Z24kW/Screenshot-2026-05-22-19-36-32-82-e2d5b3f32b79de1d45acd1fad96fbb0f.jpg" alt="Nepali Nationals 2025"></div>
-      <div class="photo photo-wide"><img src="https://i.ibb.co/s94bsH9y/Screenshot-2026-05-22-19-40-39-18-92460851df6f172a4592fca41cc2d2e6.jpg" alt="Triyog award"></div>
+      <div class="photo photo-wide"><img src="https://i.ibb.co/VGd18dm/3.jpg" alt="Nepali Nationals 2025"></div>
+      <div class="photo photo-wide"><img src="https://i.ibb.co/qMjds7xq/4.jpg" alt="Triyog award"></div>
     </div>
   </div>
 </section>
@@ -386,9 +374,10 @@ footer{background:rgba(17,28,39,.95);padding:1.75rem 6rem;display:flex;align-ite
       <div class="sec-num">03</div>
       <div><p class="sec-lbl">Extracurricular Activities</p><h2 class="sec-title">What I've <em>Built & Won</em></h2><div class="rule"></div></div>
     </div>
+
     <div class="card reveal" data-n="1">
       <p class="card-lbl">Event Director · WCA Sanctioned · 5 Nations</p>
-      <h3 class="card-title"> Organized Nepali Nationals 2025 - Biggest Cubing Competition in Nepal in 6 Years</h3>
+      <h3 class="card-title">Organized Nepali Nationals 2025 - Biggest Cubing Competition in Nepal in 6 Years</h3>
       <div class="two-col" style="gap:2rem">
         <div>
           <p class="body-text">Core organizer and director of Nepali Nationals 2025, an international speedcubing competition drawing participants from five countries (🇳🇵 🇰🇼 🇮🇳 🇯🇵 🇨🇳). Coordinated with international delegates, resolved issues and grew with every hurdle faced. Also staffed: KUbing 2024 · LOCUS 2025 · IEEE Cubing Nepal 2025.</p>
@@ -396,12 +385,36 @@ footer{background:rgba(17,28,39,.95);padding:1.75rem 6rem;display:flex;align-ite
           <div class="badge-row"><span class="badge">5 Nations</span><span class="badge">International</span><span class="badge">Biggest in 6 Years</span></div>
         </div>
         <div>
-          <div class="photo photo-wide"><img src="https://i.ibb.co/4w4Z24kW/Screenshot-2026-05-22-19-36-32-82-e2d5b3f32b79de1d45acd1fad96fbb0f.jpg" alt="Nepali Nationals 2025"></div>
+          <div class="photo photo-wide"><img src="https://i.ibb.co/GfS5BfXL/5.jpg" alt="Nepali Nationals 2025"></div>
           <p class="cap">Nepali Nationals 2025 - participants from 5 nations</p>
         </div>
       </div>
     </div>
+
     <div class="card reveal" data-n="2">
+      <p class="card-lbl">Event Organizer · WCA Sanctioned · Aug 1–2, 2026</p>
+      <h3 class="card-title">Organized Radiant Summer Cubing Nepal 2026</h3>
+      <div class="two-col" style="gap:2rem">
+        <div>
+          <p class="body-text">Co-organizer of Radiant Summer Cubing Nepal 2026, a two-day WCA competition held at Radiant Readers' Academy, Sanepa, Lalitpur with 69 competitors. Designed the event logo, handled competitor email correspondence, created a slab-based registration fee so newcomers could afford to take part, and built the schedule around a limit of 7 competition stations.</p>
+      <div class="link-row" style="margin-top:1rem">WCA: <a href="https://www.worldcubeassociation.org/competitions/RadiantSummerCubingNepal2026" target="_blank">worldcubeassociation.org/competitions/RadiantSummerCubingNepal2026</a></div>
+      <div class="badge-row"><span class="badge">69 Competitors</span><span class="badge">WCA Sanctioned</span><span class="badge">Logo Design</span><span class="badge">Event Organizer</span></div>
+        </div>
+        <div>
+          <div class="photo photo-43"><img src="https://i.ibb.co/5x5b5Drc/Screenshot-2026-11-09-130659.png" alt="Radiant Summer Cubing Nepal 2026"></div>
+          <p class="cap">Radiant Summer Cubing Nepal 2026</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card reveal" data-n="3">
+      <p class="card-lbl">Digital Marketing · Client Work · 2026</p>
+      <h3 class="card-title">Social Media Content - Pixeative Agency</h3>
+      <p class="body-text">Working on client accounts at Pixeative, a digital marketing agency, producing social media content for businesses including Aviotrace Nepal and Timbercraft Nepal.</p>
+      <div class="badge-row"><span class="badge">Pixeative</span><span class="badge">Content Creation</span><span class="badge">Client Accounts</span></div>
+    </div>
+
+    <div class="card reveal" data-n="4">
       <p class="card-lbl">Self-initiated · Age 10 to Present</p>
       <h3 class="card-title">YouTube Channel - 242,560 Views · Visual Storytelling</h3>
       <div class="two-col" style="gap:2rem">
@@ -419,12 +432,13 @@ footer{background:rgba(17,28,39,.95);padding:1.75rem 6rem;display:flex;align-ite
       </div>
       <div style="margin-top:1.5rem">
         <div class="photo photo-wide" style="max-width:700px">
-          <img src="https://i.ibb.co/QvmGZSBn/You-Tube.png" alt="YouTube Studio Analytics 242,560 views">
+          <img src="https://i.ibb.co/HDjYkrgk/Screenshot-2026-11-09-124917.png" alt="YouTube Studio Analytics 242,560 views">
         </div>
         <p class="cap">YouTube Studio - 242,560 lifetime views · 1,164 subscribers</p>
       </div>
     </div>
-    <div class="card reveal" data-n="3">
+
+    <div class="card reveal" data-n="5">
       <p class="card-lbl">Design · Documentation · School Initiative</p>
       <h3 class="card-title">School Yearbook Designer - Daffodil Boarding School</h3>
       <div class="two-col" style="gap:2rem">
@@ -432,7 +446,7 @@ footer{background:rgba(17,28,39,.95);padding:1.75rem 6rem;display:flex;align-ite
           <p class="body-text">Designed and produced the official school yearbook for Daffodil Boarding School for the Nepali academic year 2081. This involved layout design, typesetting, content writing, and print preparation, an end-to-end production project completed while managing all other commitments.</p>
           <div class="badge-row"><span class="badge">Layout Design</span><span class="badge">Copywriting</span><span class="badge">Photography</span><span class="badge">1 School</span></div>
         </div>
-        <div><img src="https://i.ibb.co/cK3mPmzV/Cam-Scanner-05-24-2026-22-07.jpg" alt="Yearbook work" style="width:100%"></div>
+        <div><img src="https://i.ibb.co/J8GRSW3/7.jpg" alt="Yearbook work" style="width:100%"></div>
       </div>
     </div>
   </div>
@@ -463,15 +477,19 @@ footer{background:rgba(17,28,39,.95);padding:1.75rem 6rem;display:flex;align-ite
           <div class="ach-row"><span class="ach-yr">2019 · 2017</span><span class="ach-t">Essay Writing Competition</span><span class="ach-b">🏆 Winner</span></div>
           <div class="ach-row"><span class="ach-yr">2019</span><span class="ach-t">Kamana Little Champs - Performed before 3,500+ audience</span><span class="ach-b">Top 10</span></div>
           <div class="ach-row"><span class="ach-yr">2019</span><span class="ach-t">Talent Show Competition - Solo stage performance</span><span class="ach-b">🏆 Winner</span></div>
+          <div class="ach-row"><span class="ach-yr">Topic</span><span class="ach-t">How studying algorithms and patterns, not just practicing more, made me faster at cubing</span><span class="ach-b">Can speak on</span></div>
+          <div class="ach-row"><span class="ach-yr">Topic</span><span class="ach-t">Organizing an international WCA competition from scratch</span><span class="ach-b">Can speak on</span></div>
+          <div class="ach-row"><span class="ach-yr">Topic</span><span class="ach-t">Learning video editing and visual storytelling from age 10</span><span class="ach-b">Can speak on</span></div>
+          <div class="ach-row"><span class="ach-yr">Topic</span><span class="ach-t">Telling Nepal's story through film and documentary</span><span class="ach-b">Can speak on</span></div>
         </div>
       </div>
       <div class="reveal-right">
         <div class="photo photo-wide" style="margin-bottom:4px">
-          <img src="https://i.ibb.co/twCKHGSH/Screenshot-2026-05-22-19-45-32-22-92460851df6f172a4592fca41cc2d2e6.jpg" alt="Pitching startup idea">
+          <img src="https://i.ibb.co/fVp5SFWr/Screenshot-2026-11-09-125900.png" alt="Pitching startup idea">
         </div>
         <p class="cap">Pitching a start-up idea on climate change</p>
         <div class="photo photo-43" style="margin-top:4px">
-          <img src="https://i.ibb.co/mVyJc5FX/Screenshot-2026-05-23-16-41-19-35-254de13a4bc8758c9908fff1f73e3725.jpg" alt="Event">
+          <img src="https://i.ibb.co/4g9cnvfk/9.jpg" alt="Event">
         </div>
       </div>
     </div>
@@ -498,11 +516,11 @@ footer{background:rgba(17,28,39,.95);padding:1.75rem 6rem;display:flex;align-ite
       </div>
       <div class="reveal-right">
         <div class="photo photo-wide">
-          <img src="https://i.ibb.co/1fXNJh8s/Screenshot-2026-05-22-19-52-26-48-f9ee0578fe1cc94de7482bd41accb329.jpg" alt="Kamana Little Dance Champion 2019">
+          <img src="https://i.ibb.co/FqX8DdPy/10.jpg" alt="Kamana Little Dance Champion 2019">
         </div>
         <p class="cap">Kamana Little Dance Champion 2019 - Semi-Final</p>
         <div class="photo photo-43" style="margin-top:4px">
-          <img src="https://i.ibb.co/jYgggcD/Screenshot-2026-05-23-16-40-16-47-254de13a4bc8758c9908fff1f73e3725.jpg" alt="Performance">
+          <img src="https://i.ibb.co/DgGH155x/13.jpg" alt="Performance">
         </div>
       </div>
     </div>
@@ -527,10 +545,10 @@ footer{background:rgba(17,28,39,.95);padding:1.75rem 6rem;display:flex;align-ite
           <li>→ <strong style="color:var(--gold2)">Bal Club Activist</strong> - Budhanilakantha Municipality (2024 to 2025)</li>
         </ul>
       </div>
-      <div class="comm-photo"><img src="https://i.ibb.co/mVjLT93v/Screenshot-2026-05-22-19-43-39-71-a23b203fd3aafc6dcb84e438dda678b6.jpg" alt="Clothing donation"></div>
+      <div class="comm-photo"><img src="https://i.ibb.co/KcpDCR3N/11.jpg" alt="Clothing donation"></div>
     </div>
     <div class="comm-item">
-      <div class="comm-photo"><img src="https://i.ibb.co/JF8brr6p/Screenshot-2026-05-22-19-39-01-61-92460851df6f172a4592fca41cc2d2e6.jpg" alt="Down Syndrome children"></div>
+      <div class="comm-photo"><img src="https://i.ibb.co/QFSyBXKm/dabce.jpg" alt="Interviewing tourists in Nepal"></div>
       <div class="comm-content">
         <p class="card-lbl">Documentary Work · 2024/25</p>
         <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--white);margin-bottom:.75rem">Interviewing Tourists - Telling Nepal's Real Story</h3>
@@ -555,7 +573,7 @@ footer{background:rgba(17,28,39,.95);padding:1.75rem 6rem;display:flex;align-ite
       <div class="reveal-left">
         <div class="hbox">
           <h3>1st Dollar at Age 12 - 6 Years of Freelance</h3>
-          <p>I managed to earn my 1st dollar at the young age of 12 (Grade 7) through my expertise in video-editing. Since my father passed away when I was just 11 months old and I was raised by a single parent, even if the amount was not a lot, it provided a small help to my financially struggling family.</p>
+          <p>I managed to earn my 1st dollar at the young age of 12 (Grade 7) through my expertise in video-editing. Even if the amount was not a lot, it was the start of everything I do today.</p>
         </div>
         <div class="hbox">
           <h3>SpeedCubeShop Sponsorship (2022 to 2025)</h3>
@@ -576,7 +594,7 @@ footer{background:rgba(17,28,39,.95);padding:1.75rem 6rem;display:flex;align-ite
       </div>
       <div class="reveal-right">
         <div class="photo" style="margin-bottom:4px">
-          <img src="https://i.ibb.co/QvmGZSBn/You-Tube.png" alt="YouTube Studio Analytics" style="width:100%;height:auto;object-fit:contain">
+          <img src="https://i.ibb.co/HDjYkrgk/Screenshot-2026-11-09-124917.png" alt="YouTube Studio Analytics" style="width:100%;height:auto;object-fit:contain">
         </div>
         <p class="cap">YouTube Studio - 242,560 views · 1,164 subscribers</p>
       </div>
@@ -596,7 +614,7 @@ footer{background:rgba(17,28,39,.95);padding:1.75rem 6rem;display:flex;align-ite
       <div class="provide-card reveal"><div class="pn">03</div><h3 class="pt">A Nepali Perspective</h3><p class="pd">I bring a South Asian, post-developing-world perspective on entrepreneurship, tourism, and storytelling that is genuinely different. I want to tell Nepal's real story to the world through video and film.</p></div>
     </div>
     <div class="photo photo-wide reveal" style="margin-top:2px">
-      <img src="https://i.ibb.co/dwQY01Qn/DSC03094.jpg" alt="Nepali Nationals">
+      <img src="https://i.ibb.co/VGd18dm/3.jpg" alt="Nepali Nationals">
     </div>
   </div>
 </section>
@@ -638,7 +656,7 @@ footer{background:rgba(17,28,39,.95);padding:1.75rem 6rem;display:flex;align-ite
 <footer>
   <span class="f-name">ANUBHAV GYAWALI · KATHMANDU, NEPAL</span>
   <div class="f-rule"></div>
-  <span class="f-note">Portfolio 2025</span>
+  <span class="f-note">Portfolio 2026</span>
 </footer>
 
 <script>
